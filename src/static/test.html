@@ -46,7 +46,7 @@
   image.addEventListener('load', async (event) => {
     try {
       const model = await mobilenet.load(1, 1.0);
-      const predictions = await model.classify(image, 10);
+      const predictions = await model.classify(image, 4);
       console.log(predictions);
       const resultsMarkup = getResultsMarkup(predictions);
       document.querySelector('.results').innerHTML = resultsMarkup;
